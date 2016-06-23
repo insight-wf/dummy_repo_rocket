@@ -1,0 +1,18 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            host: wf-radar
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 6be31624-c4cc-4e5d-bd61-73e3ce62ef03***':
+        watch: resource
+        logs:
+        -   watch_value: /automation_tickets_waiting
+        -   watch_value: /top_support_tickets
+        -   watch_value: /skynet_status
+        -   watch_value: /release_blockers
+        specs:
+            maintain_order: false
+            max_duration: 7613.744020462036
