@@ -1,0 +1,24 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            host: wf-radar
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 8727b401-a0f9-4a4d-b4cb-44e2f1dd06e8***':
+        watch: resource
+        logs:
+        -   watch_value: /cron/update_project_table
+        -   watch_value: /tasks/populate_priority_table
+        -   watch_value: /tasks/populate_issue_type_table
+        -   watch_value: /tasks/populate_project_table
+        -   watch_value: /cron/update_issue_type_table
+        -   watch_value: /tasks/populate_status_table
+        -   watch_value: /cron/update_employee_table
+        -   watch_value: /cron/update_status_table
+        -   watch_value: /tasks/populate_employee_table
+        -   watch_value: /cron/update_priority_table
+        specs:
+            maintain_order: false
+            max_duration: 25798.535108566284
