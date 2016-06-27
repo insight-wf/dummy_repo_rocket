@@ -1,0 +1,16 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            host: wf-radar
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 13fe95f3-fd12-4d8c-bd11-9593bc27bb3e***':
+        watch: resource
+        logs:
+        -   watch_value: /tasks/populate_issue_board_table_all_boards
+        -   watch_value: /cron/update_issue_board_table
+        specs:
+            max_duration: 7812.872886657715
+            maintain_order: true
