@@ -1,0 +1,30 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            appId: w-insight
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo c9233489-b134-4c8d-a411-7f226b0402ed***':
+        watch: resource
+        logs:
+        -   watch_value: /static/assets/react_dom.js
+        -   watch_value: /api/v1/project/Bigsky/report_card/updated_time
+        -   watch_value: /static/assets/modernizr-custom.js
+        -   watch_value: /static/assets/wchart.js
+        -   watch_value: /auth/users/is_current_user_admin
+        -   watch_value: /static/assets/app.css
+        -   watch_value: /api/v1/project/Bigsky/report_card/function%20durations/07-06-2016
+        -   watch_value: /static/assets/form-toggle-switches.min.css
+        -   watch_value: /static/fonts/icons/Wdesk_Icons.woff
+        -   watch_value: /api/v1/apollo/get_apollo_project_names
+        -   watch_value: /static/assets/dropdown-submenu.min.css
+        -   watch_value: /api/v1/hubble/get_kinesis_project_names
+        -   watch_value: /static/assets/index.dart.js
+        -   watch_value: /static/assets/grid-v2.min.css
+        -   watch_value: /static/assets/react.js
+        -   watch_value: /static/assets/web-skin.css
+        specs:
+            maintain_order: false
+            max_duration: 3590.7199382781982
