@@ -1,0 +1,16 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            appId: w-insight
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 2e86c002-c19a-43a7-9196-3515af738743***':
+        watch: resource
+        logs:
+        -   watch_value: /api/v1/project/*/report_card/function%20durations/*
+        -   watch_value: /api/v1/*/*/*/*
+        specs:
+            maintain_order: true
+            max_duration: 2489.0220165252686
