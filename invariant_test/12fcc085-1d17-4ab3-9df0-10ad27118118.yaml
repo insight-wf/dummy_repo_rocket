@@ -1,0 +1,22 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            appId: w-insight
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 12fcc085-1d17-4ab3-9df0-10ad27118118***':
+        watch: resource
+        logs:
+        -   watch_value: /tasks/rolling_report_card/insight
+        -   watch_value: /tasks/rolling_report_card/ssc-bolt
+        -   watch_value: /tasks/rolling_report_card/server-composition
+        -   watch_value: /tasks/rolling_report_card/skynet
+        -   watch_value: /tasks/rolling_report_card/w-rmconsole
+        -   watch_value: /tasks/rolling_report_card/skynet-hrd
+        -   watch_value: /cron/rolling_report_card
+        -   watch_value: /tasks/rolling_report_card/bolt
+        specs:
+            maintain_order: true
+            max_duration: 38194.16403770447
