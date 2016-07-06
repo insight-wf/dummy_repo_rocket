@@ -1,0 +1,16 @@
+project_name: Radar
+log_source:
+    splunk:
+        query_params:
+            appId: w-insight
+notifications:
+-   hipchat_room_id: '2751447'
+tests:
+    '***Auto created by Apollo 903e8cbf-eb1e-4f9f-95a0-2f9e353b1e1a***':
+        watch: resource
+        logs:
+        -   watch_value: /api/v1/hubble/get_kinesis_project_names
+        -   watch_value: /auth/users/is_current_user_admin
+        specs:
+            maintain_order: true
+            max_duration: 128.68905067443848
